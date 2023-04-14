@@ -1,9 +1,10 @@
 package com.bruna.guedes.fleet_control.business.driver
 
+import org.springframework.data.annotation.Id
 import java.util.UUID
 
 data class Driver(
-    val id: UUID,
+    @Id val id: UUID,
     val name: String,
     val cnhType: String
 )
