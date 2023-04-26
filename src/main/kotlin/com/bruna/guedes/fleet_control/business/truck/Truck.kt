@@ -1,7 +1,7 @@
 package com.bruna.guedes.fleet_control.business.truck
 
 import org.springframework.data.annotation.Id
-import java.util.UUID
+import java.util.*
 
 data class Truck(
     @Id val id: UUID,
