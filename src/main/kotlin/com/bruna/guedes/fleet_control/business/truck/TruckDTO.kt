@@ -15,7 +15,6 @@ data class TruckDTO(
     val model: String,
     val loadCapacity: Int,
     val status: String
-
     )
 
 fun NewTruckDTO.toTruck() = Truck(UUID.randomUUID(), this.driver, this.model, this.loadCapacity, this.status)

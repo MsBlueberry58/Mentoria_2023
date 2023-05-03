@@ -7,4 +7,6 @@ interface TruckService {
     fun saveTruck(truckDTO: NewTruckDTO): TruckDTO
 
     fun getTruck(truckId: UUID): TruckDTO
+
+    fun saveLocation(truckId: UUID, latLong: LatLong)
 }

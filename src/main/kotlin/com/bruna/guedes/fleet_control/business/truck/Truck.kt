@@ -8,5 +8,6 @@ data class Truck(
     val driver: UUID,
     val model: String,
     val loadCapacity: Int,
-    val status: String
+    val status: String,
+    val location: LatLong? = null
 )

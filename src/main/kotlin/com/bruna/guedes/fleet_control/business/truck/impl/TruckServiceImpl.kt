@@ -21,4 +21,8 @@ class TruckServiceImpl(private val truckRepository: TruckRepository, private val
     override fun getTruck(truckId: UUID): TruckDTO {
         return truckRepository.findById(truckId).get().toDto()
     }
+
+    override fun saveLocation(truckId: UUID, latLong: LatLong) {
+        truckRepository.updateLocation(truckId, latLong)
+    }
 }

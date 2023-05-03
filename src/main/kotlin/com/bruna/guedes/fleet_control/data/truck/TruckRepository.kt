@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface TruckRepository : MongoRepository<Truck, UUID>{
-}
+interface TruckRepository : MongoRepository<Truck, UUID>, CustomTruckRepository
