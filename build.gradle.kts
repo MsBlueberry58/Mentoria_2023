@@ -29,6 +29,9 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("io.github.openfeign:feign-core:12.3")
+	implementation("io.github.openfeign:feign-jackson:12.3")
+	implementation("io.github.resilience4j:resilience4j-circuitbreaker:2.0.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
