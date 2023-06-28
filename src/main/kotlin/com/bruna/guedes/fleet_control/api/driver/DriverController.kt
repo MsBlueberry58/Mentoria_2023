@@ -1,5 +1,6 @@
 package com.bruna.guedes.fleet_control.api.driver
 
+import com.bruna.guedes.fleet_control.api.external.routes.RouteListResponse
 import com.bruna.guedes.fleet_control.business.driver.DriverDTO
 import com.bruna.guedes.fleet_control.business.driver.DriverService
 import com.bruna.guedes.fleet_control.business.driver.NewDriverDTO
@@ -24,8 +25,8 @@ class DriverController(
     }
 
     @GetMapping
-    fun getAvailableRoutes() {
-        driverService.getAvailableRoutes()
+    fun getAvailableRoutes(): ResponseEntity<RouteListResponse> {
+        return ResponseEntity.ok(driverService.getAvailableRoutes())
     }
 
 }

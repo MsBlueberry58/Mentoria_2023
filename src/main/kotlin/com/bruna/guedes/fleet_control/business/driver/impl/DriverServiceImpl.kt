@@ -1,6 +1,6 @@
 package com.bruna.guedes.fleet_control.business.driver.impl
 
-import com.bruna.guedes.fleet_control.api.routes.RouteListResponse
+import com.bruna.guedes.fleet_control.api.external.routes.RouteListResponse
 import com.bruna.guedes.fleet_control.business.driver.*
 import com.bruna.guedes.fleet_control.data.driver.DriverRepository
 import com.bruna.guedes.fleet_control.third_party.RouteApiClient

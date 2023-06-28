@@ -1,4 +1,4 @@
-package com.bruna.guedes.fleet_control.api.routes
+package com.bruna.guedes.fleet_control.api.external.routes
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
