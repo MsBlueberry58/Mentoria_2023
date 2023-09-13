@@ -32,6 +32,8 @@ dependencies {
 	implementation("io.github.openfeign:feign-core:12.3")
 	implementation("io.github.openfeign:feign-jackson:12.3")
 	implementation("io.github.resilience4j:resilience4j-circuitbreaker:2.0.0")
+	implementation("io.github.resilience4j:resilience4j-micrometer:2.0.0")
+	implementation("io.micrometer:micrometer-registry-prometheus")
 	implementation("io.vavr:vavr:0.10.4")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

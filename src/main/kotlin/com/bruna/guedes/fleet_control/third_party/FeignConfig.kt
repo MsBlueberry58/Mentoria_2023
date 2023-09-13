@@ -1,5 +1,6 @@
 package com.bruna.guedes.fleet_control.third_party
 
+import com.fasterxml.jackson.databind.ObjectMapper
 import feign.Feign
 import feign.jackson.JacksonDecoder
 import org.springframework.context.annotation.Bean
@@ -9,9 +10,9 @@ import org.springframework.context.annotation.Configuration
 class FeignConfig {
 
     @Bean
-    fun routeClient(): RouteApiClient {
+    fun routeClient(mapper: ObjectMapper): RouteApiClient {
         return Feign.builder()
-            .decoder(JacksonDecoder())
-            .target(RouteApiClient::class.java, "http://localhost:8080")
+            .decoder(JacksonDecoder(mapper))
+            .target(RouteApiClient::class.java, "http://localhost:8083")
     }
 }

@@ -2,19 +2,24 @@ package com.bruna.guedes.fleet_control.third_party
 
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry
+import io.github.resilience4j.micrometer.tagged.TaggedCircuitBreakerMetrics
+import io.micrometer.core.instrument.MeterRegistry
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import java.io.IOException
 import java.time.Duration
-import java.util.concurrent.TimeoutException
 
 
 @Configuration
 class CircuitBreakerConfiguration {
 
     @Bean
-    fun genericCircuitBreakerRegistry() =
-        CircuitBreakerRegistry.ofDefaults()
+    fun genericCircuitBreakerRegistry(meterRegistry: MeterRegistry): CircuitBreakerRegistry {
+        val ofDefaults = CircuitBreakerRegistry.ofDefaults()
+        TaggedCircuitBreakerMetrics
+            .ofCircuitBreakerRegistry(ofDefaults)
+            .bindTo(meterRegistry)
+        return ofDefaults
+    }
 
     @Bean
     fun routeCircuitBreakerConfig() =
@@ -26,6 +31,6 @@ class CircuitBreakerConfiguration {
             .build()
 
     @Bean
-    fun routeCircuitBreaker() =
-        genericCircuitBreakerRegistry().circuitBreaker("routeCircuitBreaker", routeCircuitBreakerConfig())
+    fun routeCircuitBreaker(genericCircuitBreakerRegistry: CircuitBreakerRegistry) =
+        genericCircuitBreakerRegistry.circuitBreaker("routeCircuitBreaker", routeCircuitBreakerConfig())
 }
