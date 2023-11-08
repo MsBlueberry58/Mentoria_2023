@@ -1,6 +1,6 @@
 package com.bruna.guedes.fleet_control.business.driver
 
-import com.bruna.guedes.fleet_control.api.external.routes.RouteListResponse
+import com.bruna.guedes.fleet_control.external.routes.RouteListResponse
 import java.util.*
 
 interface DriverService {

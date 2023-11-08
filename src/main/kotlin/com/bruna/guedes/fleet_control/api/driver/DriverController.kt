@@ -1,9 +1,9 @@
 package com.bruna.guedes.fleet_control.api.driver
 
-import com.bruna.guedes.fleet_control.api.external.routes.RouteListResponse
 import com.bruna.guedes.fleet_control.business.driver.DriverDTO
 import com.bruna.guedes.fleet_control.business.driver.DriverService
 import com.bruna.guedes.fleet_control.business.driver.NewDriverDTO
+import com.bruna.guedes.fleet_control.external.routes.RouteListResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
