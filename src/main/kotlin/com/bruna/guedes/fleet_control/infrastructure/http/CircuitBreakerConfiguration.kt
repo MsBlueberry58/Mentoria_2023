@@ -1,4 +1,4 @@
-package com.bruna.guedes.fleet_control.third_party
+package com.bruna.guedes.fleet_control.infrastructure.http
 
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry

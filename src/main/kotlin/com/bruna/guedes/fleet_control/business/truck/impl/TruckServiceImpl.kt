@@ -2,8 +2,8 @@ package com.bruna.guedes.fleet_control.business.truck.impl
 
 import com.bruna.guedes.fleet_control.business.driver.DriverService
 import com.bruna.guedes.fleet_control.business.truck.*
-import com.bruna.guedes.fleet_control.data.truck.TruckRepository
-import com.bruna.guedes.fleet_control.exception.DriverDoesNotExistException
+import com.bruna.guedes.fleet_control.infrastructure.data.truck.TruckRepository
+import com.bruna.guedes.fleet_control.business.exception.DriverDoesNotExistException
 import org.springframework.stereotype.Service
 import java.util.*
 

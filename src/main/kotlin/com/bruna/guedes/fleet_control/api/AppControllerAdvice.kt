@@ -1,7 +1,7 @@
 package com.bruna.guedes.fleet_control.api
 
-import com.bruna.guedes.fleet_control.exception.DriverAlreadyExistsException
-import com.bruna.guedes.fleet_control.exception.DriverDoesNotExistException
+import com.bruna.guedes.fleet_control.business.exception.DriverAlreadyExistsException
+import com.bruna.guedes.fleet_control.business.exception.DriverDoesNotExistException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice

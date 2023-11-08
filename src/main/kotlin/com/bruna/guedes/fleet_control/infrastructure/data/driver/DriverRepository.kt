@@ -1,4 +1,4 @@
-package com.bruna.guedes.fleet_control.data.driver
+package com.bruna.guedes.fleet_control.infrastructure.data.driver
 
 import com.bruna.guedes.fleet_control.business.driver.Driver
 import org.springframework.data.mongodb.repository.MongoRepository

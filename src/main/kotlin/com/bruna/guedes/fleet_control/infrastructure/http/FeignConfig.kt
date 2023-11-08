@@ -1,4 +1,4 @@
-package com.bruna.guedes.fleet_control.third_party
+package com.bruna.guedes.fleet_control.infrastructure.http
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import feign.Feign

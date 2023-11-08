@@ -1,4 +1,4 @@
-package com.bruna.guedes.fleet_control.api.external.routes
+package com.bruna.guedes.fleet_control.external.routes
 
 
 import io.micrometer.core.instrument.MeterRegistry

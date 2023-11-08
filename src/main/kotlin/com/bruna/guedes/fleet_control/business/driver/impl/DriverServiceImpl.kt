@@ -1,10 +1,10 @@
 package com.bruna.guedes.fleet_control.business.driver.impl
 
-import com.bruna.guedes.fleet_control.api.external.routes.RouteListResponse
 import com.bruna.guedes.fleet_control.business.driver.*
-import com.bruna.guedes.fleet_control.data.driver.DriverRepository
-import com.bruna.guedes.fleet_control.exception.DriverAlreadyExistsException
-import com.bruna.guedes.fleet_control.third_party.DecoratedRouteApiClient
+import com.bruna.guedes.fleet_control.infrastructure.data.driver.DriverRepository
+import com.bruna.guedes.fleet_control.business.exception.DriverAlreadyExistsException
+import com.bruna.guedes.fleet_control.external.routes.RouteListResponse
+import com.bruna.guedes.fleet_control.infrastructure.http.DecoratedRouteApiClient
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Service
 import java.util.*
